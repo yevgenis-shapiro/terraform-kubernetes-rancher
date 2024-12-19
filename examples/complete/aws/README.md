@@ -15,7 +15,7 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_rancher"></a> [rancher](#module\_rancher) | squareops/rancher/kubernetes | n/a |
+| <a name="module_rancher"></a> [rancher](#module\_rancher) | yevgenis-shapiro/rancher/kubernetes | n/a |
 
 ## Resources
 
