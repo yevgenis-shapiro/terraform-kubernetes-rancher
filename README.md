@@ -26,7 +26,7 @@ This module is compatible with EKS, AKS & GKE which is great news for users depl
 
 ```hcl
 module "rancher" {
-  source         = "squareops/rancher/kubernetes"
+  source         = "yevgenis-shapiro/rancher/kubernetes"
   rancher_config = {
     email    = "email@email.com"
     hostname = ""
