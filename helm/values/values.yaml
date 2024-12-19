@@ -1,0 +1,49 @@
+## Custom annotations for rancher ingress
+
+ingress:
+  extraAnnotations:
+    kubernetes.io/ingress.class: "nginx"
+
+  tls:
+    source: letsEncrypt
+
+## Ingress class for Issuer
+
+letsEncrypt:
+  email: ${email}
+  environment: production
+  ingress:
+    class: nginx
+
+# Fully qualified name to reach your Rancher server
+hostname: ${hostname}
+
+## Using limits and requests
+
+resources:
+  limits:
+    cpu: 800m
+    memory: 3Gi
+  requests:
+    cpu: 100m
+    memory: 500Mi
+
+bootstrapPassword: ${bootstrapPassword}
+
+nodeAffinity: {}
+
+postDelete:
+  enabled: true
+  image:
+    repository: rancher/shell
+    tag: v0.1.22
+
+
+global:
+  cattle:
+    psp:
+      # enabled: false #PSPs enablement should default to true
+      enabled: ""
+
+# rancherImageTag: v2.7-head
+rancherImageTag: v2.8.2
